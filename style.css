@@ -1,0 +1,192 @@
+body {
+    margin: 0;
+    color: #13294B;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height: 1.6;
+}
+
+.navbar {
+    background: #7BAFD4;
+    position: sticky;
+    top: 0;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0.9rem 1.5rem;
+    display: flex;
+        justify-content: center;
+    gap: 1.5rem;
+}
+
+.navbar a {
+    color: #13294B;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.navbar a:hover {
+    color: white;
+}
+
+#title {
+    margin: 1.5rem 1.5rem 0.25rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+    color: #13294B;
+}
+
+#subtitle {
+    margin: 0 1.5rem;
+    font-size: 1.1rem;
+    color:#13294B;
+}
+
+.page {
+    max-width: 64rem;
+    margin: 0 auto;
+}
+
+main {
+    padding: 1.5rem;
+}
+
+.about-text .box {
+    float: left;
+    width: 18rem;
+    margin: 0 2rem 1rem 0;
+}
+
+.about-text .box img {
+    aspect-ratio: 3/4;
+}
+
+.about-text h2 {
+    margin-top: 0;
+}
+
+.about-text::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+
+.box {
+    background: #7BAFD4;
+    color: #13294B;
+    padding: 1rem;
+}
+
+.box img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    background: rgba(255, 255, 255, 0.4);
+}
+
+blockquote {
+    margin: 1rem 0 0;
+}
+
+blockquote p {
+    margin: 0 0 0.5rem;
+    font-style: italic;
+}
+
+blockquote cite {
+    display: block;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.quote-banner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.quote-banner img {
+    aspect-ratio: 16/10;
+}
+
+.quote-banner blockquote {
+    margin: 0;
+    padding-left: 1.5rem;
+    border-left: 2px solid #13294B;
+}
+
+.resume-frame {
+    display: block;
+    width: 100%;
+    height: 85vh;
+    border: 2px solid var(--#7BAFD4);
+}
+
+/* Resume page: the page itself is one screen tall, so only the PDF scrolls */
+.resume-page {
+  height: 100vh;
+  height: 100dvh;                  
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding-top: 3.6rem;
+}
+
+.resume-page .page {
+  flex: 1;                         /* takes all the space under the navbar */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.resume-page main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.resume-page .resume-frame {
+  flex: 1;                         /* the PDF fills whatever space is left */
+  width: 100%;
+  border: 2px solid var(--carolina-blue);
+}
+
+.resume-page .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.statement-quote blockquote {
+  margin: 0;               /* the box's own padding is enough space */
+}
+
+.statement-quote {
+  margin-bottom: 2rem;     /* gap between the quote box and your paragraphs */
+}
+
+@media (max-width: 700px) {
+    .about-text .box {
+        float: none;
+        width: auto;
+        margin: 0 0 1.5rem;
+    }
+
+    .quote-banner {
+        grid-template-columns: 1fr;
+    }
+
+    .quote-banner blockquote {
+        padding-left: 0;
+        border-left: none;
+    }
+}
